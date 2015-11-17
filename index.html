@@ -33,6 +33,32 @@
   <!--[if lt IE 9]>
   <script src="node_modules/reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
+
+  <style>
+    .check {
+      font-size: 150% !important;
+    }
+
+    .check::after {
+      content: '\2713'
+    }
+
+    .cross {
+      font-size: 150% !important;
+    }
+
+    .cross::after {
+      content: '\2717'
+    }
+
+    .good {
+      color: green;
+    }
+
+    .bad {
+      color: red;
+    }
+  </style>
 </head>
 
 <body>
@@ -68,59 +94,170 @@
     </section>
 
     <section>
-      <h1>Migration to angular2</h1>
+      <h1>
+        <a href="https://www.youtube.com/watch?v=uXvNDcnLnwU">Angular 1.5 and beyond</a>
+      </h1>
 
-      <p class="fragment">
+      <section>
+        <h2>Migration to 2.0</h2>
+      </section>
+
+      <section>
         <a href="" target="_blank">ngRewrite</a>
-      </p>
+      </section>
 
-      <p class="fragment">
+      <section>
         just kidding :)
-      </p>
-
-      <!--<section>
-
-        <section>
-          <p>Those who do not know if or when they will upgrade to Angular 2, but they want all the benefits of
-            organizing their code into Components
-          </p>
-        </section>
-        <section>
-          <p>Those who want a production safe way to prepare their Angular 1 projects <strong>now</strong> for the
-            easiest possible upgrade path <strong>later</strong>.
-          </p>
-        </section>
-        <section>
-          <p>Those who are actively migrating to Angular 2</p>
-        </section>
-      </section>-->
+      </section>
     </section>
 
     <section>
-      <h1>Migration to angular2</h1>
-
-      <p class="fragment">
+      <h2>
         <a href="https://github.com/ngUpgraders/ng-forward" target="_blank">ngForward</a>
-      </p>
+      </h2>
 
-      <p class="fragment">
-        still angular 1 but with angular 2 semantics
-      </p>
+      <section>
+        <ul>
+          <li class="fragment">
+            Those who do not know if or when they will upgrade to Angular 2, but they want all the benefits of
+            organizing their code into Components.
+          </li>
+
+          <li class="fragment">
+            Those who want a production safe way to prepare their Angular 1 projects <strong>now</strong> for the
+            easiest possible upgrade path <strong>later</strong>.
+          </li>
+
+          <li class="fragment">
+            Those who are actively migrating to Angular 2
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        Still angular 1 but with angular 2 semantics
+      </section>
+    </section>
+
+    <!--    <section>
+          <p>
+            <a href="https://github.com/ngUpgraders/ng-forward" target="_blank">ngUpgrade</a>
+          </p>
+
+          <p class="fragment">
+            angular 2 side by side with angular 1
+          </p>
+        </section>
+
+        <section>
+          <h1>Migration to angular2</h1>
+
+          <h3>References</h3>
+
+          <p>
+          </p>
+        </section>-->
+
+    <section>
+      <h2>
+        <a href="https://www.youtube.com/watch?v=gxZE8SqC7as">Turn the performance knob to 11</a>
+      </h2>
+
+      <section>TODO:</section>
     </section>
 
     <section>
-      <h1>Migration to angular2</h1>
+      <h2>
+        <a href="https://www.youtube.com/watch?v=_TDUV9R09PM">What's new in Typescript</a>
+      </h2>
+
+      <section>TODO:</section>
+    </section>
+
+    <section>
+      <h2>
+        <a href="https://www.youtube.com/watch?v=-lTGnYwnEuM">Protractor Styleguide</a>
+      </h2>
+
+      <section>Recommendations</section>
+
+      <section>
+        <p>1. Put all e2e test files in one dedicated folder</p>
+        <span class="fragment good check"></span>
+      </section>
+
+      <section>
+        <p>2. Use one configuration file + multiple tasks</p>
+        <span class="fragment good check"></span>
+      </section>
+
+      <section>
+        <p>3. Never use XPATH</p>
+
+        <small class="fragment">
+element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[1]/div/div/div[3]/div[2]/div[2]/div[1]/div[1]/h3"));
+        </small>
+
+        <span class="fragment good check"></span>
+      </section>
+
+      <section>
+        <p>4. Page Objects</p>
+        <span class="fragment good check"></span>
+      </section>
+
+      <section>
+        <p>5. Make your tests independent at least at the file level</p>
+        <span class="fragment good check"></span>
+      </section>
+
+      <section>
+        <p>6. Prefer protractor locators</p>
+        <span class="fragment bad cross"></span>
+      </section>
+    </section>
+
+    <section>
+      <h2>Locator Strategies</h2>
+      <pre>
+          <code class="html">
+            &lt;ul class="red"&gt;
+            &lt;li&gt;{{color.name | capitalize}}&lt;/li&gt;
+            &lt;li&gt;{{color.shade}}&lt;/li&gt;
+            &lt;li&gt;{{color.code}}&lt;/li&gt;
+            &lt;/ul&gt;
+          </code>
+      </pre>
+      <pre>
+          <code class="javascript">
+            /* avoid */
+            var nameElem = element.all(by.css('.red li')).get(0);
+
+            /* recommended */
+            var nameElem = element(by.binding('color.name'));
+          </code>
+      </pre>
+    </section>
+
+    <section>
+      <h2>
+        <a href="https://www.youtube.com/watch?v=mtcRjMFPMYs">Protractor + ES6 generators</a>
+      </h2>
 
       <p class="fragment">
-        <a href="https://github.com/ngUpgraders/ng-forward" target="_blank">ngUpgrade</a>
+        Generators are functions which can be exited and later re-entered. Their context (variable bindings) will be
+        saved across re-entrances.
       </p>
 
-      <p class="fragment">
-        angular 2 side by side with angular 1
-      </p>
+      <ul class="fragment">
+        <li>References:</li>
+        <li><a href="https://davidwalsh.name/es6-generators">The basics of ES6 generators</a></li>
+        <li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">function*</a>
+        </li>
+      </ul>
     </section>
   </div>
-
 </div>
 
 <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
