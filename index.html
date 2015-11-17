@@ -222,7 +222,7 @@ element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[1]/div/div/
       <pre>
           <code class="html">
             &lt;ul class="red"&gt;
-            &lt;li&gt;{{color.name | capitalize}}&lt;/li&gt;
+            &lt;li data-test-color-name&gt;{{color.name | capitalize}}&lt;/li&gt;
             &lt;li&gt;{{color.shade}}&lt;/li&gt;
             &lt;li&gt;{{color.code}}&lt;/li&gt;
             &lt;/ul&gt;
@@ -235,6 +235,9 @@ element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[1]/div/div/
 
             /* recommended */
             var nameElem = element(by.binding('color.name'));
+
+            /* the ncc way */
+            var nameElem = element(by.css('[data-test-color-name]'));
           </code>
       </pre>
     </section>
