@@ -35,6 +35,10 @@
   <![endif]-->
 
   <style>
+    ul {
+      list-style: decimal !important;
+    }
+
     .check {
       font-size: 150% !important;
     }
@@ -74,40 +78,50 @@
 
       <p>
         <small>
-          Slides are at
-          <a href="https://github.com/tabanliviu" target="_blank">tabanliviu</a>
-          /
-          <a href="https://github.com/tabanliviu/angularConnect2015" target="_blank">angularConnect2015</a>
-        </small>
-      </p>
-
-      <p>
-        <small>
           YouTube <a href="https://www.youtube.com/channel/UCzrskTiT_ObAk3xBkVxMz5g" target="_blank">Angular Connect
           2015</a>
         </small>
       </p>
-
-      <aside class="notes">
-        Test
-      </aside>
     </section>
 
     <section>
-      <h1>
+      <h2>
         <a href="https://www.youtube.com/watch?v=uXvNDcnLnwU">Angular 1.5 and beyond</a>
-      </h1>
+      </h2>
+
+      <section>
+        <ul>
+          <li class="fragment">
+            Multi-slot transclusion. This allows a transcluding directive to have multiple “slots” to place different content.
+          </li>
+          <li class="fragment">
+            Component helper to simplify directive creation and bridge the gap between 1.x and 2.0
+          </li>
+          <li class="fragment">Roadmap
+            <span class="fragment"><br>
+              Angular 1.x support will continue as long as it is still widely needed. The team track the stats between angularjs.org (for ng1.x docs) and angular.io (for ng2 docs) as an indicator of community adoption.
+            </span>
+            <span class="fragment"><br>then put a link to angular.io/cardboard for a contest</span>
+          </li>
+        </ul>
+      </section>
 
       <section>
         <h2>Migration to 2.0</h2>
       </section>
 
       <section>
-        <a href="" target="_blank">ngRewrite</a>
-      </section>
-
-      <section>
-        just kidding :)
+        <ul>
+          <li>
+            <a href="" target="_blank">ngRewrite</a>
+          </li>
+          <li class="fragment">
+            ... just kidding :)
+          </li>
+          <li class="fragment">
+            But not really.
+          </li>
+        </ul>
       </section>
     </section>
 
@@ -139,71 +153,179 @@
       </section>
     </section>
 
-    <!--    <section>
-          <p>
-            <a href="https://github.com/ngUpgraders/ng-forward" target="_blank">ngUpgrade</a>
-          </p>
-
-          <p class="fragment">
-            angular 2 side by side with angular 1
-          </p>
-        </section>
-
-        <section>
-          <h1>Migration to angular2</h1>
-
-          <h3>References</h3>
-
-          <p>
-          </p>
-        </section>-->
-
     <section>
       <h2>
-        <a href="https://www.youtube.com/watch?v=gxZE8SqC7as">Turn the performance knob to 11</a>
+        <a href="http://blog.thoughtram.io/angular/2015/10/24/upgrading-apps-to-angular-2-using-ngupgrade.html" target="_blank">ngUpgrade</a>
       </h2>
 
-      <section>TODO:</section>
+      <ul>
+        <li class="fragment">
+          Angular 2 side by side with Angular 1
+        </li>
+
+        <li class="fragment">
+          Better performance
+        </li>
+
+        <li class="fragment">
+          Server-side Rendering
+        </li>
+
+        <li class="fragment">
+          More powerful templating
+        </li>
+
+        <li class="fragment">
+          Upgrade Angular 1 components to Angular 2 one at a time
+        </li>
+
+        <li class="fragment">
+          ...
+        </li>
+
+        <li class="fragment">
+          Profit! (remove Angular 1)
+        </li>
+      </ul>
     </section>
 
     <section>
       <h2>
-        <a href="https://www.youtube.com/watch?v=_TDUV9R09PM">What's new in Typescript</a>
+        <a href="https://www.youtube.com/watch?v=gxZE8SqC7as" target="_blank">Turn the performance knob to 11</a>
       </h2>
 
-      <section>TODO:</section>
+      <section>
+        <ul>
+          <li class="fragment">
+            Upgrade angular version
+          </li>
+          <li class="fragment">
+            Limit active $watchers
+          </li>
+          <li class="fragment">
+            Use track by in ng-repeat
+          </li>
+          <li class="fragment">
+            Precompute filter expressions
+          </li>
+          <li class="fragment">
+            Limit DOM to visible elements
+          </li>
+          <li class="fragment">
+            All good except <span class="fragment good">profile yout code first!</span>
+          </li>
+          <li class="fragment">
+            <a href="https://github.com/bahmutov/code-snippets" target="_blank">Code Snippets</a>
+          </li>
+        </ul>
+      </section>
+
     </section>
 
     <section>
       <h2>
-        <a href="https://www.youtube.com/watch?v=-lTGnYwnEuM">Protractor Styleguide</a>
+        <a href="https://www.youtube.com/watch?v=_TDUV9R09PM" target="_blank">What's new in Typescript</a>
+      </h2>
+
+      <section>
+
+        <ul>
+          <li class="fragment">TypeScript 1.6</li>
+          <li class="fragment">
+            Very strong TypeScript presence throughout the conf.
+            Most code examples were done in TS.
+          </li>
+          <li class="fragment">
+            Angular2 does not require TS or ES6 but it's build using TS.
+          </li>
+          <li class="fragment">
+            More (optional) static typing will only make code easier to read and modify
+          </li>
+          <li class="fragment">
+            We're still in ES5 world and anything better requires compilation + training + experience
+          </li>
+        </ul>
+
+      </section>
+    </section>
+
+    <section>
+      <h2>
+        <a href="https://www.youtube.com/watch?v=-lTGnYwnEuM" target="_blank">Protractor Styleguide</a>
       </h2>
 
       <section>Recommendations</section>
 
       <section>
-        <p>1. Put all e2e test files in one dedicated folder</p>
-        <span class="fragment good check"></span>
+        <p>
+          1. Put all e2e test files in one dedicated folder
+          <span class="fragment good check"></span>
+        </p>
       </section>
 
       <section>
-        <p>2. Use one configuration file + multiple tasks</p>
-        <span class="fragment good check"></span>
+        <p>
+          2. Use one configuration file + multiple tasks
+          <span class="fragment good check"></span>
+        </p>
       </section>
 
       <section>
-        <p>3. Never use XPATH</p>
+        <p>
+          3. XPATH</span>
+        </p>
 
         <small class="fragment">
-element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[1]/div/div/div[3]/div[2]/div[2]/div[1]/div[1]/h3"));
+          element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[1]/div/div/div[3]/div[2]/div[2]/div[1]/div[1]/h3"));
         </small>
 
-        <span class="fragment good check"></span>
+        <p class="fragment">
+          <span class="bad">Never</span> use XPATH <span class="fragment good check"></span>
+        </p>
       </section>
 
       <section>
         <p>4. Page Objects</p>
-        <span class="fragment good check"></span>
+        <pre>
+            <code class="javascript">
+  /* avoid */
+
+  describe('Question page', function() {
+    it('should answer any question', function() {
+      var question = element(by.model('question.text'));
+      var answer = element(by.binding('answer'));
+      var button = element(by.css('.question-button'));
+
+      question.sendKeys("What is the purpose of meaning?");
+      button.click();
+      expect(answer.getText()).toEqual("Chocolate!");
+    });
+  });
+            </code>
+        </pre>
+      </section>
+
+      <section>
+        <p>4. Page Objects <span class="fragment good check"></span></p>
+        <pre>
+            <code class="javascript">
+  /* recommended */
+
+  /* question.page.js */
+  var QuestionPage = function() {
+    this.question = element(by.model('question.text'));
+    this.answer = element(by.binding('answer'));
+    this.button = element(by.className('question-button'));
+
+    this.ask = function(question) {
+      this.question.sendKeys(question);
+      this.button.click();
+    };
+  };
+
+  module.exports = UserPropertiesPage;
+            </code>
+        </pre>
       </section>
 
       <section>
@@ -215,50 +337,107 @@ element(by.xpath("//*@id="calc"]/form/section/section[2]/div/div/div[1]/div/div/
         <p>6. Prefer protractor locators</p>
         <span class="fragment bad cross"></span>
       </section>
-    </section>
 
-    <section>
-      <h2>Locator Strategies</h2>
-      <pre>
-          <code class="html">
-            &lt;ul class="red"&gt;
-            &lt;li data-test-color-name&gt;{{color.name | capitalize}}&lt;/li&gt;
-            &lt;li&gt;{{color.shade}}&lt;/li&gt;
-            &lt;li&gt;{{color.code}}&lt;/li&gt;
-            &lt;/ul&gt;
-          </code>
-      </pre>
-      <pre>
-          <code class="javascript">
-            /* avoid */
-            var nameElem = element.all(by.css('.red li')).get(0);
+      <section>
+        <pre>
+            <code class="html">
+  &lt;ul class="red"&gt;
+    &lt;li data-test-color-name&gt;{{color.name | capitalize}}&lt;/li&gt;
+    &lt;li&gt;{{color.shade}}&lt;/li&gt;
+    &lt;li&gt;{{color.code}}&lt;/li&gt;
+  &lt;/ul&gt;
+            </code>
+        </pre>
+        <pre>
+            <code class="javascript">
+  /* avoid */
+  var nameElem = element.all(by.css('.red li')).get(0);
 
-            /* recommended */
-            var nameElem = element(by.binding('color.name'));
+  /* recommended */
+  var nameElem = element(by.binding('color.name'));
 
-            /* the ncc way */
-            var nameElem = element(by.css('[data-test-color-name]'));
-          </code>
-      </pre>
+  /* the ncc way */
+  var nameElem = element(by.css('[data-test-color-name]'));
+            </code>
+        </pre>
+      </section>
     </section>
 
     <section>
       <h2>
-        <a href="https://www.youtube.com/watch?v=mtcRjMFPMYs">Protractor + ES6 generators</a>
+        <a href="https://www.youtube.com/watch?v=mtcRjMFPMYs" target="_blank">Protractor + ES6 generators</a>
       </h2>
 
-      <p class="fragment">
+      <section>
+      <p>
         Generators are functions which can be exited and later re-entered. Their context (variable bindings) will be
         saved across re-entrances.
       </p>
+      </section>
 
-      <ul class="fragment">
-        <li>References:</li>
-        <li><a href="https://davidwalsh.name/es6-generators">The basics of ES6 generators</a></li>
-        <li>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">function*</a>
-        </li>
-      </ul>
+      <section>
+        <p>Before</p>
+        <pre>
+          <code class="javascript">  beforeEach(function() {
+    http.put(DB_URL + '.json', cats)
+      .then(function() {
+        return browser.get('/index.html');
+      })
+      .then(function() {
+        var mainElement = element(by.className('topcat-container'));
+        return browser.wait(EC.presenceOf(mainElement));
+      })
+      .then(function() {
+        return browser.wait(function () {
+          return mainElement.evaluate('vm.ready');
+        });
+      });
+  });</code>
+        </pre>
+      </section>
+
+      <section>
+        <p>After</p>
+        <pre>
+          <code class="javascript">
+  beforeEach(co.wrap(function*() {
+    yield http.put(DB_URL + '.json', cats);
+
+    yield browser.get('/index.html');
+
+    var mainElement = element(by.className('topcat-container'));
+    yield browser.wait(EC.presenceOf(mainElement));
+    yield browser.wait(function () {
+      return mainElement.evaluate('vm.ready');
+    });
+  }));
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <p>References</p>
+
+        <ul>
+          <li>
+            <a href="https://davidwalsh.name/es6-generators" target="_blank">Basics of ES6 generators</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*" target="_blank">developer/mozilla/function*</a>
+          </li>
+        </ul>
+      </section>
+
+    </section>
+
+    <section>
+      <h1>Thank you</h1>
+      <p>
+          Slides are at
+          <a href="https://github.com/tabanliviu" target="_blank">tabanliviu</a>
+          /
+          <a href="https://github.com/tabanliviu/angularConnect2015" target="_blank">angularConnect2015</a>
+      </p>
     </section>
   </div>
 </div>
